@@ -10,7 +10,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     if request:
         try:
-            url = os.environ["MyDbConnection"]   # TODO: Update with appropriate MongoDB connection information
+            url = os.environ["MyDbConnection"]
             client = pymongo.MongoClient(url)
             database = client['db-uda-2']
             collection = database['advertisements']
